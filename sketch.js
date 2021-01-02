@@ -39,22 +39,20 @@ function setup() {
 	Engine.run(engine);
 
 	//fairy.debug = true;
-	//fairy.setCollider("rectangle",0,0,900,900);
+	fairy.setCollider("rectangle",0,0,900,900);
 }
 
-
+//
 function draw() {
   background(bgImg);
   if(counter!= 1){
  keyPressed();}
-  if(starBody.position.y > fairy.y - 20 && fairy.x + 120 < starBody.position.x < fairy.x + 130 ){
+  if(starBody.position.y > fairy.y - 20 && starBody.position.x < 125 + fairy.x ){
 	  Matter.Body.setStatic(starBody,true);
 	  counter = 1;
-	 
-	  
   }
  
-  
+
   star.x = starBody.position.x;
   star.y = starBody.position.y;
   
