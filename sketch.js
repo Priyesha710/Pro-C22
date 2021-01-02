@@ -47,7 +47,7 @@ function draw() {
   background(bgImg);
   if(counter!= 1){
  keyPressed();}
-  if(starBody.position.y > fairy.y - 20 && fairy.x + 100 < starBody.position.x < fairy.x + 130 ){
+  if(starBody.position.y > fairy.y - 20 && fairy.x + 120 < starBody.position.x < fairy.x + 130 ){
 	  Matter.Body.setStatic(starBody,true);
 	  counter = 1;
 	 
@@ -62,7 +62,7 @@ function draw() {
   fill("white");
   textSize(15);
   text("Help the fairy collect the star by taking it to the right star and pressing down arrow!",30,50);
-  if(starBody.position.y > fairy.y - 20 && fairy.x + 100 < starBody.position.x < fairy.x + 130 ){
+  if(counter === 1 ){
 	textSize(20);
 	text("Done!",100,100);
 	  fairyVoice.play();
