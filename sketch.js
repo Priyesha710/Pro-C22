@@ -65,6 +65,7 @@ function draw() {
   if(starBody.position.y > fairy.y - 20 && fairy.x + 100 < starBody.position.x < fairy.x + 130 ){
 	textSize(20);
 	text("Done!",100,100);
+	  fairyVoice.play();
   }
 }
 
